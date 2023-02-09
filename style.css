@@ -1,0 +1,146 @@
+:root {
+	--color-100: hsl(225, 100%, 98%);
+	--color-200: hsl(225, 100%, 94%);
+	--color-300: hsl(224, 23%, 55%);
+	--color-400: hsl(245, 75%, 52%);
+	--color-500: hsl(223, 47%, 23%);
+}
+   
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Red Hat Display', sans-serif;
+	font-weight: 500;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(images/pattern-background-mobile.svg);
+	background-repeat: no-repeat;
+	background-color: var(--color-200);
+}
+
+@media (min-width: 375px) {
+	body {
+		background-image: url(images/pattern-background-desktop.svg);
+	}
+}
+
+.container {
+	max-width: 330px;
+	background-color: white;
+	border-radius: 1rem;
+	display: grid;
+	gap: 0.8rem;
+	-webkit-box-shadow: 0px 10px 31px -6px rgba(31,47,86,0.22);
+	-moz-box-shadow: 0px 10px 31px -6px rgba(31,47,86,0.22);
+	box-shadow: 0px 10px 31px -6px rgba(31,47,86,0.22);
+}
+
+img, picture {
+	display: block;
+	max-width: 100%;
+	border-radius: 1rem 1rem 0 0;
+}
+
+.content{
+	display: grid;
+	gap: 1.3rem;
+	padding: 0.8rem 1.5rem;
+	text-align: center;
+}
+
+.content h1 {
+	color: var(--color-500);
+	font-size: 1.5rem;
+	font-weight: 900;
+}
+
+.content p {
+	color: var(--color-300);
+	line-height: 1.5;
+	padding: 0 0.5rem;
+}
+
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--color-100);
+	padding: 1rem;
+	border-radius: 0.8rem;
+}
+
+.details{
+	display: grid;
+	padding-right: 1.5rem;
+
+}
+
+.plan {
+	color: var(--color-500);
+	font-weight: 900;
+}
+
+.price {
+	color: var(--color-300);
+}
+
+a {
+	color: var(--color-400);
+	font-weight: 700;
+	font-size: 0.8rem;
+}
+
+button {
+	font-size: 1rem;
+	font-weight: 700;
+	border-radius: 0.8rem;
+	border: none;
+	padding: 0.8rem 0;
+}
+
+.payment-btn {
+	background-color: var(--color-400);
+	color: white;
+	-webkit-box-shadow: 0px 28px 31px -6px rgba(56,41,224,0.23);
+	-moz-box-shadow: 0px 28px 31px -6px rgba(56,41,224,0.23);
+	box-shadow: 0px 28px 31px -6px rgba(56,41,224,0.23);
+}
+
+.cancel-btn {
+	background-color: transparent;
+	color: var(--color-300);
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 0.8rem;
+	color: var(--color-500);
+}
+
+/* active states */
+
+a:hover, button:hover {
+	cursor: pointer;
+}
+
+a:hover, a:active {
+	color: var(--color-400);
+	text-decoration: none;
+	opacity: 0.7;
+}
+
+.payment-btn:hover, .payment-btn:active {
+	opacity: 0.7;
+}
+
+.cancel-btn:hover, .cancel-btn:active {
+	color: var(--color-500);
+}
